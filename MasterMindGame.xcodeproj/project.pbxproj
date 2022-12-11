@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF222BAC294496E900D37DA1 /* PickerDelegateAndDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF222BAB294496E900D37DA1 /* PickerDelegateAndDataSource.swift */; };
+		AF3EB73E2942953B0055AE94 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB73D2942953B0055AE94 /* GameViewController.swift */; };
+		AF3EB74029429E4E0055AE94 /* MoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EB73F29429E4E0055AE94 /* MoveCell.swift */; };
+		AFA6AC0A29432B760048D1F6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6AC0929432B760048D1F6 /* ItemCell.swift */; };
+		AFB272F02942686900265FFC /* MasterMindEngine in Frameworks */ = {isa = PBXBuildFile; productRef = AFB272EF2942686900265FFC /* MasterMindEngine */; };
 		AFDBBB04292F707200AB28B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDBBB03292F707200AB28B8 /* AppDelegate.swift */; };
 		AFDBBB06292F707200AB28B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDBBB05292F707200AB28B8 /* SceneDelegate.swift */; };
 		AFDBBB08292F707200AB28B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDBBB07292F707200AB28B8 /* ViewController.swift */; };
@@ -16,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF222BAB294496E900D37DA1 /* PickerDelegateAndDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDelegateAndDataSource.swift; sourceTree = "<group>"; };
+		AF3EB73D2942953B0055AE94 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AF3EB73F29429E4E0055AE94 /* MoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCell.swift; sourceTree = "<group>"; };
+		AFA6AC0929432B760048D1F6 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		AFDBBB00292F707200AB28B8 /* MasterMindGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterMindGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDBBB03292F707200AB28B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFDBBB05292F707200AB28B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB272F02942686900265FFC /* MasterMindEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				AFDBBB02292F707200AB28B8 /* MasterMindGame */,
 				AFDBBB01292F707200AB28B8 /* Products */,
+				AFDBBB2F292F72BF00AB28B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +74,19 @@
 				AFDBBB0C292F707500AB28B8 /* Assets.xcassets */,
 				AFDBBB0E292F707500AB28B8 /* LaunchScreen.storyboard */,
 				AFDBBB11292F707500AB28B8 /* Info.plist */,
+				AF3EB73D2942953B0055AE94 /* GameViewController.swift */,
+				AF3EB73F29429E4E0055AE94 /* MoveCell.swift */,
+				AFA6AC0929432B760048D1F6 /* ItemCell.swift */,
+				AF222BAB294496E900D37DA1 /* PickerDelegateAndDataSource.swift */,
 			);
 			path = MasterMindGame;
+			sourceTree = "<group>";
+		};
+		AFDBBB2F292F72BF00AB28B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +105,9 @@
 			dependencies = (
 			);
 			name = MasterMindGame;
+			packageProductDependencies = (
+				AFB272EF2942686900265FFC /* MasterMindEngine */,
+			);
 			productName = MasterMindGame;
 			productReference = AFDBBB00292F707200AB28B8 /* MasterMindGame.app */;
 			productType = "com.apple.product-type.application";
@@ -137,9 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3EB73E2942953B0055AE94 /* GameViewController.swift in Sources */,
 				AFDBBB08292F707200AB28B8 /* ViewController.swift in Sources */,
+				AFA6AC0A29432B760048D1F6 /* ItemCell.swift in Sources */,
 				AFDBBB04292F707200AB28B8 /* AppDelegate.swift in Sources */,
 				AFDBBB06292F707200AB28B8 /* SceneDelegate.swift in Sources */,
+				AF222BAC294496E900D37DA1 /* PickerDelegateAndDataSource.swift in Sources */,
+				AF3EB74029429E4E0055AE94 /* MoveCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = ../MasterMindEngine;
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				INFOPLIST_FILE = MasterMindGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,6 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = ../MasterMindEngine;
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				INFOPLIST_FILE = MasterMindGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -341,6 +372,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFB272EF2942686900265FFC /* MasterMindEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MasterMindEngine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AFDBBAF8292F707200AB28B8 /* Project object */;
 }
