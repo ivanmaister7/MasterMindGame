@@ -99,7 +99,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = (segue.destination as? GameViewController)
-        destination?.gameEngine = MasterMindEngine(rowSize: rowSizeCurrentValue, moves: movesCurrentValue, colors: colorsCurrentValue, duration: Double(timerCurrentValue))
+        destination?.gameEngine = MasterMindEngine(rowSize: rowSizeCurrentValue, moves: movesCurrentValue, colors: colorsCurrentValue, duration: Double(timerCurrentValue), realtime: realTimeMode)
     }
 }
 

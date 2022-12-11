@@ -37,10 +37,15 @@ class GameViewController: UIViewController {
         
         selectedItems = Array(repeating: ItemRequest(color: .blue), count: gameEngine.getCurrentGameSettings().getRowSize())
         
+        hideRollButtons()
         timerTask()
-        
         reloadData()
         
+    }
+    
+    func hideRollButtons() {
+        rollbackButton.isHidden = !gameEngine.getCurrentGameSettings().realtimeMode
+        rollforwardButton.isHidden = !gameEngine.getCurrentGameSettings().realtimeMode
     }
     
     func timerTask() {
@@ -49,8 +54,6 @@ class GameViewController: UIViewController {
             let (isWinner, winner) = self.gameEngine.hasWinner()
             if isWinner {
                 self.timer.invalidate()
-                //self.timerLabel.text = winner?.rawValue
-                // show allert with winner
                 let alert = UIAlertController(title: "\(winner!.rawValue) win!",
                                               message: "Game over. You restart the game or go to the main menu and start with new settings",
                                               preferredStyle: .alert)
@@ -60,6 +63,8 @@ class GameViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }
+                self.rollbackButton.isHidden = false
+                self.rollforwardButton.isHidden = false
                 
             } else {
                 let allSecondsLeft = Int(self.gameEngine.getPlayerState().allTimeLeft)
@@ -75,7 +80,6 @@ class GameViewController: UIViewController {
     func reloadData() {
         requestData = gameEngine.getCurrentGameState().requestRows
         responceData = gameEngine.getCurrentGameState().responceRows
-        //invalidate timer and show winner if hasWinner
         
         movesTable.reloadData()
     }
@@ -87,16 +91,19 @@ class GameViewController: UIViewController {
     
     @IBAction func restartAction(_ sender: Any) {
         gameEngine.resignGame()
+        hideRollButtons()
         timerTask()
         reloadData()
     }
     
     @IBAction func rollforwardAction(_ sender: Any) {
-        
+        gameEngine.rollForwardMove()
+        reloadData()
     }
     
     @IBAction func rollbackAction(_ sender: Any) {
-        
+        gameEngine.rollbackMove()
+        reloadData()
     }
     
     

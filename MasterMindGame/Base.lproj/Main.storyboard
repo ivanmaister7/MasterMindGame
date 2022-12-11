@@ -294,7 +294,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-ml-yzC">
-                                <rect key="frame" x="324" y="104" width="29" height="28"/>
+                                <rect key="frame" x="332" y="104" width="29" height="28"/>
                                 <state key="normal" image="arrow.uturn.right.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                 </state>
@@ -303,7 +303,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHA-ca-DUD">
-                                <rect key="frame" x="279" y="104" width="29" height="28"/>
+                                <rect key="frame" x="295" y="104" width="29" height="28"/>
                                 <state key="normal" image="arrow.uturn.backward.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                 </state>
@@ -326,8 +326,8 @@
                             <constraint firstItem="yeq-gT-x1W" firstAttribute="top" secondItem="1YP-wc-PP1" secondAttribute="top" constant="16" id="bo7-GB-gS7"/>
                             <constraint firstItem="xEc-VU-9ju" firstAttribute="top" secondItem="1YP-wc-PP1" secondAttribute="top" constant="16" id="cGd-q5-umY"/>
                             <constraint firstItem="D4f-9B-R36" firstAttribute="top" secondItem="Dac-Qk-S3l" secondAttribute="bottom" constant="8" id="jxb-o2-6cr"/>
-                            <constraint firstItem="yeq-gT-x1W" firstAttribute="leading" secondItem="rXx-ml-yzC" secondAttribute="trailing" constant="16" id="kB7-sV-8cB"/>
-                            <constraint firstItem="rXx-ml-yzC" firstAttribute="leading" secondItem="tHA-ca-DUD" secondAttribute="trailing" constant="16" id="mLp-Lz-jQA"/>
+                            <constraint firstItem="yeq-gT-x1W" firstAttribute="leading" secondItem="rXx-ml-yzC" secondAttribute="trailing" constant="8" id="kB7-sV-8cB"/>
+                            <constraint firstItem="rXx-ml-yzC" firstAttribute="leading" secondItem="tHA-ca-DUD" secondAttribute="trailing" constant="8" id="mLp-Lz-jQA"/>
                             <constraint firstItem="tHA-ca-DUD" firstAttribute="top" secondItem="1YP-wc-PP1" secondAttribute="top" constant="16" id="nkG-Sx-hvm"/>
                             <constraint firstItem="Dac-Qk-S3l" firstAttribute="top" secondItem="oA9-Dn-jqv" secondAttribute="bottom" id="pTH-Hx-NMp"/>
                             <constraint firstItem="xEc-VU-9ju" firstAttribute="centerX" secondItem="1YP-wc-PP1" secondAttribute="centerX" id="uO0-ch-8lI"/>
